@@ -7,7 +7,6 @@ class Solution:
                 if nums[i] + nums[j] == target:                    
                     return [i,j]
 
-
 sol = Solution()
 #Test cases go here
 print(f"{sol.twoSum([2,7,11,15], 9) == [0,1] if True else False}")
