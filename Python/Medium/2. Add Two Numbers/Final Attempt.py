@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../../../LeetCode')
+sys.path.append('../../../Python')
 
 from typing import Optional
 from ListNodeBuilder import ListNode, buildListNode
