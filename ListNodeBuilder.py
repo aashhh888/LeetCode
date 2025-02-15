@@ -8,7 +8,7 @@ class ListNode:
         
     def __eq__(self, other): 
         if not isinstance(other, ListNode):
-            # don't attempt to compare against unrelated types
+            # Don't attempt to compare against unrelated types
             return NotImplemented
 
         areEqual = False        
@@ -20,13 +20,10 @@ class ListNode:
     
     def __str__(self):            
         asString = ""
-
         while self:
             asString = asString + str(self.val)
             self = self.next
-
         return asString
-
 
 def buildListNode(items: List[int]) -> ListNode:
     ln = None
