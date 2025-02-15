@@ -9,6 +9,6 @@ class Solution:
 
 sol = Solution()
 #Test cases go here
-print(f"{sol.twoSum([2,7,11,15], 9) == [0,1] if True else False}")
-print(f"{sol.twoSum([3,2,4], 6) == [1,2] if True else False}")
-print(f"{sol.twoSum([3,3], 6) == [0,1] if True else False}")
+print(f"{sol.twoSum([2,7,11,15], 9) == [0,1]}")
+print(f"{sol.twoSum([3,2,4], 6) == [1,2]}")
+print(f"{sol.twoSum([3,3], 6) == [0,1]}")

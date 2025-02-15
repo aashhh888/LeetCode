@@ -18,4 +18,4 @@ class Solution:
 
 sol = Solution()
 #Test cases go here
-print(f"{sol.TemplateMethod() == "Template" if True else False}")
+print(f"{sol.TemplateMethod() == "Template"}")
