@@ -5,10 +5,7 @@ from typing import Optional
 from ListNodeBuilder import ListNode, buildListNode
 
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        return self.addTwoWithCarry(l1, l2)
-    
-    def addTwoWithCarry(self, l1: Optional[ListNode], l2: Optional[ListNode], carry: int = 0) -> Optional[ListNode]:  
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode], carry: int = 0) -> Optional[ListNode]:  
         valL1 = l1.val if l1 else 0
         valL2 = l2.val if l2 else 0
 
@@ -16,7 +13,7 @@ class Solution:
         carry = (valL1 + valL2 + carry) // 10 
 
         if l1 or l2:
-            return ListNode(lVal, self.addTwoWithCarry(l1.next if l1 else None, l2.next if l2 else None, carry))
+            return ListNode(lVal, self.addTwoNumbers(l1.next if l1 else None, l2.next if l2 else None, carry))
         else:            
             return None if lVal == 0 else ListNode(lVal, None)
         
