@@ -5,17 +5,13 @@ from typing import Optional
 from ListNodeBuilder import ListNode, buildListNode
 
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode], carry: int = 0) -> Optional[ListNode]:  
-        valL1 = l1.val if l1 else 0
-        valL2 = l2.val if l2 else 0
-
-        lVal = (valL1 + valL2 + carry) % 10
-        carry = (valL1 + valL2 + carry) // 10 
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode], carry: int = 0) -> Optional[ListNode]:
+        dm = divmod((l1.val if l1 else 0) + (l2.val if l2 else 0) + carry, 10)
 
         if l1 or l2:
-            return ListNode(lVal, self.addTwoNumbers(l1.next if l1 else None, l2.next if l2 else None, carry))
+            return ListNode(dm[1], self.addTwoNumbers(l1.next if l1 else None, l2.next if l2 else None, dm[0]))
         else:            
-            return None if lVal == 0 else ListNode(lVal, None)
+            return None if dm[1] == 0 else ListNode(dm[1], None)
         
 sol = Solution()
 #Test cases go here
