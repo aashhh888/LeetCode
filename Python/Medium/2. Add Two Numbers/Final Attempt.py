@@ -1,8 +1,8 @@
 import sys
-sys.path.append('../../../Python')
+sys.path.append('../../shared')
 
 from typing import Optional
-from ListNodeBuilder import ListNode, buildListNode
+from listnodebuilder import ListNode, buildListNode
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode], carry: int = 0) -> Optional[ListNode]:
