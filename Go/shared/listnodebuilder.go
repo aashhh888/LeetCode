@@ -14,6 +14,14 @@ func BuildListNode(items []int) *ListNode {
 	return ln
 }
 
+func BuildMultipleListNodes(items [][]int) []ListNode {
+	newItems := []ListNode{}
+	for _, i := range items {
+		newItems = append(newItems, *BuildListNode(i))
+	}
+	return newItems
+}
+
 // https://dev.to/dsysd_dev/reverse-a-generic-list-in-golang-2fd4
 func reverse[T any](list []T) []T {
 	for i, j := 0, len(list)-1; i < j; {

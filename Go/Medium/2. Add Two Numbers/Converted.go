@@ -42,10 +42,12 @@ func divmod(numerator, denominator int) (quotient, remainder int) {
 }
 
 func main() {
-	fmt.Println(reflect.DeepEqual(addTwoNumbers(shared.BuildListNode([]int{2, 4, 3}), shared.BuildListNode([]int{5, 6, 4}), 0),
-		shared.BuildListNode([]int{7, 0, 8})))
-	fmt.Println(reflect.DeepEqual(addTwoNumbers(shared.BuildListNode([]int{0}), shared.BuildListNode([]int{0}), 0),
-		shared.BuildListNode([]int{0})))
-	fmt.Println(reflect.DeepEqual(addTwoNumbers(shared.BuildListNode([]int{9, 9, 9, 9, 9, 9, 9}), shared.BuildListNode([]int{9, 9, 9, 9}), 0),
-		shared.BuildListNode([]int{8, 9, 9, 9, 0, 0, 0, 1})))
+	case1 := shared.BuildMultipleListNodes([][]int{{2, 4, 3}, {5, 6, 4}, {7, 0, 8}})
+	fmt.Println(reflect.DeepEqual(addTwoNumbers(&case1[0], &case1[1], 0), &case1[2]))
+
+	case2 := shared.BuildListNode([]int{0})
+	fmt.Println(reflect.DeepEqual(addTwoNumbers(case2, case2, 0), case2))
+
+	case3 := shared.BuildMultipleListNodes([][]int{{9, 9, 9, 9, 9, 9, 9}, {9, 9, 9, 9}, {8, 9, 9, 9, 0, 0, 0, 1}})
+	fmt.Println(reflect.DeepEqual(addTwoNumbers(&case3[0], &case3[1], 0), &case3[2]))
 }
