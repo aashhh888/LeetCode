@@ -8,7 +8,7 @@ type ListNode struct {
 func BuildListNode(items []int) *ListNode {
 	var ln *ListNode
 	items = reverse(items)
-	for i := range items {
+	for _, i := range items {
 		ln = &ListNode{i, ln}
 	}
 	return ln
