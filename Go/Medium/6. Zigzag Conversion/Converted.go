@@ -12,7 +12,7 @@ func convert(s string, numRows int) string {
 	}
 
 	loc := 0
-	var res []string
+	res := []string{}
 	zig := true
 
 	for _, c := range s {
@@ -23,9 +23,9 @@ func convert(s string, numRows int) string {
 		}
 
 		if zig {
-			loc = loc + 1
+			loc++
 		} else {
-			loc = loc - 1
+			loc--
 		}
 
 		if loc == 0 {
