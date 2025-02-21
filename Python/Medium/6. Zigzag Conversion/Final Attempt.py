@@ -19,7 +19,7 @@ class Solution:
 
             if loc == 0:
                 zig = True
-            elif loc == loc == (numRows - 1):
+            elif loc == (numRows - 1):
                 zig = False
 
         return ''.join(res)
