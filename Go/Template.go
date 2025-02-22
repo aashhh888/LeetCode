@@ -10,5 +10,6 @@ func templateMethod() string {
 }
 
 func main() {
+	// Test cases go here
 	fmt.Println(reflect.DeepEqual(templateMethod(), "Template"))
 }
