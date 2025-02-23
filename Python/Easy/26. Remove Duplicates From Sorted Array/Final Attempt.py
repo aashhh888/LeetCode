@@ -18,3 +18,4 @@ print(f"{case1 == [1,2,2]}")
 case2 = [0,0,1,1,1,2,2,3,3,4]
 print(f"{sol.removeDuplicates(case2) == 5}")
 print(f"{case2 == [0,1,2,3,4,2,2,3,3,4]}")
+#Test
